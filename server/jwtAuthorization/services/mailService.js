@@ -1,6 +1,7 @@
 class MailService {
 
-    async activationMail() {
+    async activationMail(emailTo, link) {
+
 
     }
 }

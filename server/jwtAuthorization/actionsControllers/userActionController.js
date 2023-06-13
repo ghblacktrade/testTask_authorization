@@ -1,6 +1,6 @@
 class UserActionController {
 
-    async login(request, responce, next) {
+    async login(request, response, next) {
 
         try {
 
@@ -10,7 +10,7 @@ class UserActionController {
 
     }
 
-    async registration(request, responce, next) {
+    async registration(request, response, next) {
 
         try {
 
@@ -20,7 +20,7 @@ class UserActionController {
 
     }
 
-    async logout(request, responce, next) {
+    async logout(request, response, next) {
 
         try {
 
@@ -30,7 +30,7 @@ class UserActionController {
 
     }
 
-    async activate(request, responce, next) {
+    async activate(request, response, next) {
 
         try {
 
@@ -40,7 +40,7 @@ class UserActionController {
 
     }
 
-    async refresh(request, responce, next) {
+    async refresh(request, response, next) {
 
         try {
 
@@ -50,11 +50,11 @@ class UserActionController {
 
     }
 
-    async users(request, responce, next) {
+    async users(request, response, next) {
 
         try {
 
-            responce.json(['Pasha is WORK'])
+            response.json(['Pasha is WORK'])
 
         } catch (e) {
 
