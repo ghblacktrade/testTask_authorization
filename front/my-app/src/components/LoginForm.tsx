@@ -6,12 +6,23 @@ const LoginForm :FC = () => {
     const [password, setIsPassword] = useState<string>()
     return (
         <div>
+
             <input
                 onChange={event => setIsEmail(event.target.value)}
                 value={email}
                 type='text'
-                placeholder=''
+                placeholder='Enter your email'
             />
+            <input
+                onChange={event => setIsEmail(event.target.value)}
+                value={email}
+                type='text'
+                placeholder='Enter your email'
+            />
+
+            <button>Sign in</button>
+            <button>Sign up</button>
+
 
         </div>
     );
