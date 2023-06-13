@@ -40,7 +40,7 @@ class UserActionController {
 
     }
 
-    async refresh(request, respons ae, next) {
+    async refresh(request, response, next) {
 
         try {
 
