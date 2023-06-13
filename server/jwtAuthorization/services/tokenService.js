@@ -15,6 +15,34 @@ class TokenService {
         }
     }
 
+    validateAccessToken(token) {
+
+        try {
+
+            const userData = jwt.verify(token, process.env.JWT_ACCES_TOKEN)
+
+            return userData
+
+        } catch (err) {
+
+            return null
+        }
+    }
+
+    validateRefreshToken(token) {
+
+        try {
+
+            const userData = jwt.verify(token, process.env.JWT_REFRESH_TOKEN)
+
+            return userData
+
+        } catch (err) {
+
+            return null
+        }
+    }
+
 // for our token for saving in database by user id and check this token inside database
     async saveDataToken(userId, refreshToken) {
 
@@ -30,6 +58,20 @@ class TokenService {
         const tokenSave = await Token.create({user: userId, refreshToken})
 
         return tokenSave
+    }
+
+    async removeToken(refreshToken) {
+
+        const tokenData = await Token.deleteOne({refreshToken})
+
+        return tokenData
+    }
+
+    async findToken(refreshToken) {
+
+        const tokenData = await Token.findOne({refreshToken})
+
+        return tokenData
     }
 }
 
