@@ -1,11 +1,22 @@
+const userService = require('../services/userService')
+
 class UserActionController {
 
     async login(request, response, next) {
 
         try {
 
-        } catch (e) {
+            const {email, password} = request.body
+            const userData = await userService.registration(email, password)
+            // for save token in cookie, you need add day count
+            response.cookie('refreshToken', userData.refreshToken, {maxAge: , httpOnly: true})
 
+            // for save user side
+            return response.json(userData)
+
+        } catch (err) {
+
+            console.log(err)
         }
 
     }
@@ -14,7 +25,7 @@ class UserActionController {
 
         try {
 
-        } catch (e) {
+        } catch (err) {
 
         }
 
@@ -24,7 +35,7 @@ class UserActionController {
 
         try {
 
-        } catch (e) {
+        } catch (err) {
 
         }
 
@@ -34,7 +45,7 @@ class UserActionController {
 
         try {
 
-        } catch (e) {
+        } catch (err) {
 
         }
 
@@ -44,7 +55,7 @@ class UserActionController {
 
         try {
 
-        } catch (e) {
+        } catch (err) {
 
         }
 
@@ -56,7 +67,7 @@ class UserActionController {
 
             response.json(['Pasha is WORK'])
 
-        } catch (e) {
+        } catch (err) {
 
         }
 
