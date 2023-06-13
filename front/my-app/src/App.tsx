@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
+import LoginForm from "./components/LoginForm"
 
 function App() {
   return (
     <div className="App">
-      PASHA RUN
+
+        <LoginForm />
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

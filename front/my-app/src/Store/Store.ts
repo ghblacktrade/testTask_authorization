@@ -1,6 +1,6 @@
-import {IUser} from "../auth/user.interface";
-import {makeAutoObservable} from "mobx";
-import Auth from "../auth/Auth";
+import {IUser} from "../auth/user.interface"
+import {makeAutoObservable} from "mobx"
+import Auth from "../auth/Auth"
 
 export default class Store {
 

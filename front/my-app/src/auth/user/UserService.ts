@@ -1,6 +1,6 @@
-import {AxiosResponse} from "axios";
-import $api from "../../axios/main";
-import {IUser} from "../user.interface";
+import {AxiosResponse} from "axios"
+import $api from "../../axios/main"
+import {IUser} from "../user.interface"
 
 export default class UserService {
 
