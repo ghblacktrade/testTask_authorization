@@ -1,6 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import {createContext} from "vm";
+import Store from './Store/Store'
+
+interface State {
+
+    state: Store,
+}
+
+const store = new Store()
+
+export const Context = createContext<State>({
+
+    store,
+
+})
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
